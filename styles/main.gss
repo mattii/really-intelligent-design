@@ -1,0 +1,39 @@
+/**************************************************/
+/* base.gss
+/**************************************************/
+
+[page-width] == ::window[width];
+[page-width] <= 1000;
+
+[page-height] == ::window[height];
+
+[grid] == 6 !require;
+
+/**************************************************/
+/* viewport.gss
+/**************************************************/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/**************************************************/
+/* main.gss
+/**************************************************/
+
+h1 {
+    margin-top:0;
+    margin-bottom: == 2 * [grid];
+    line-height: == 8 * [grid];
+    font-size: == 6 * [grid];
+}
+
+#page {
+    width: == [page-width];
+    height: == [page-height];
+    height: == ::[intrinsic-height];
+    background: hotpink;
+    center-x: == ::window[center-x];
+}    
+
