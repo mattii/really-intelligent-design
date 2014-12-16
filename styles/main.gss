@@ -2,10 +2,11 @@
 /* base.gss
 /**************************************************/
 
-[page-width] == ::window[width];
-[page-width] <= 1000;
-
 [grid] == 6 !require;
+
+[page-max-width] == 150 * [grid] !require;
+[modal-max-width] == 100 * [grid] !require;
+[modal-max-height] == 100 * [grid] !require;
 
 /**************************************************/
 /* typo.gss
@@ -32,12 +33,30 @@ body {
 /**************************************************/
 
 .page {
-    width: == [page-width];
+    width: == ::window[width];
+    width: <= [page-max-width];
     height: == ::window[height];
     height: == ::[intrinsic-height];
-    background: hotpink;
     center-x: == ::window[center-x];
-}    
+    background: hotpink;
+}
+
+/**************************************************/
+/* modal.gss
+/**************************************************/
+
+.modal {
+    [modal-margin] == ([page-max-width] - [modal-max-width]) / 2;
+    [modal-width] == ::window[width] - 2 * [modal-margin];
+    [modal-height] == ::window[height] - 2 * [modal-margin];
+    width: == [modal-width];
+    width: <= [modal-max-width];
+    height: == [modal-height];
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+    overflow-y: scroll;
+    background: hotpink;
+}
 
 /**************************************************/
 /* main.gss
