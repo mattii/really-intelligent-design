@@ -5,9 +5,18 @@
 [page-width] == ::window[width];
 [page-width] <= 1000;
 
-[page-height] == ::window[height];
-
 [grid] == 6 !require;
+
+/**************************************************/
+/* typo.gss
+/**************************************************/
+
+h1 {
+    margin-top: 0;
+    margin-bottom: == 2 * [grid];
+    line-height: == 8 * [grid];
+    font-size: == 6 * [grid];
+}
 
 /**************************************************/
 /* viewport.gss
@@ -19,21 +28,17 @@ body {
 }
 
 /**************************************************/
-/* main.gss
+/* page.gss
 /**************************************************/
 
-h1 {
-    margin-top:0;
-    margin-bottom: == 2 * [grid];
-    line-height: == 8 * [grid];
-    font-size: == 6 * [grid];
-}
-
-#page {
+.page {
     width: == [page-width];
-    height: == [page-height];
+    height: == ::window[height];
     height: == ::[intrinsic-height];
     background: hotpink;
     center-x: == ::window[center-x];
 }    
 
+/**************************************************/
+/* main.gss
+/**************************************************/
