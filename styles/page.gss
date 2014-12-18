@@ -1,0 +1,12 @@
+/**************************************************/
+/* page.gss
+/**************************************************/
+
+.page {
+    width: == ::window[width];
+    width: <= [page-max-width];
+    height: == ::window[height];
+    height: == ::[intrinsic-height];
+    center-x: == ::window[center-x];
+    background: hotpink;
+}

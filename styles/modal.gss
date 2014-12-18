@@ -1,0 +1,16 @@
+/**************************************************/
+/* modal.gss
+/**************************************************/
+
+.modal {
+    [modal-margin] == ([page-max-width] - [modal-max-width]) / 2;
+    [modal-width] == ::window[width] - 2 * [modal-margin];
+    [modal-height] == ::window[height] - 2 * [modal-margin];
+    width: == [modal-width];
+    width: <= [modal-max-width];
+    height: == [modal-height];
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+    overflow-y: scroll;
+    background: hotpink;
+}

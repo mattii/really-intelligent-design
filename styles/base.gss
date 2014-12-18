@@ -1,0 +1,9 @@
+/**************************************************/
+/* base.gss
+/**************************************************/
+
+[grid] == 6 !require;
+
+[page-max-width] == 150 * [grid] !require;
+[modal-max-width] == 100 * [grid] !require;
+[modal-max-height] == 100 * [grid] !require;
