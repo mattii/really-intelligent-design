@@ -1,0 +1,79 @@
+/**************************************************/
+/* Basic form
+/**************************************************/
+
+
+form {
+
+    margin-bottom: == 4 * [grid];
+
+    .form-group {
+        margin-bottom: == 3 * [grid];
+
+        label {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: == 1 * [grid];
+        }
+    }
+
+    .form-control {
+        width: 100%;
+        height: == 6 * [grid];
+        padding: == 2 * [grid];
+        line-height: 4 * [grid];
+        border: 1px solid #000;
+        display: block;
+
+    }
+
+    .checkbox {
+        margin-bottom: == 3 * [grid];
+    }
+
+}
+
+
+
+
+/**************************************************/
+/* Horizontal form
+/**************************************************/
+
+form.form-horizontal {
+    .form-group {
+        
+
+        label {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: == 1 * [grid];
+            width: ==  ::[intrinsic-width];     
+        } 
+
+        .form-control {
+
+        }   
+    }
+}
+
+
+.form-group label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: == 1 * [grid];
+}
+
+.form-control {
+    width: 100%;
+    height: == 6 * [grid];
+    padding: == 2 * [grid];
+    line-height: 4 * [grid];
+    border: 1px solid #000;
+    display: block;
+
+}
+
+.checkbox {
+    margin-bottom: == 3 * [grid];
+}
