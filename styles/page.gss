@@ -2,10 +2,6 @@
 @import "typo.gss";
 @import "viewport.gss";
 
-/**************************************************/
-/* page.gss
-/**************************************************/
-
 .page {
     width: == [page-width];
     height: == ::window[height];

@@ -2,10 +2,6 @@
 @import "typo.gss";
 @import "viewport.gss";
 
-/**************************************************/
-/* modal.gss
-/**************************************************/
-
 .modal {
     height: == ::[intrinsic-height];
     height: <= ::window[height] - [gap];

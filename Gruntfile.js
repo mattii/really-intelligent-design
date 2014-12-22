@@ -15,6 +15,7 @@ module.exports = function (grunt) {
         css_import: {
             "test/assets/page.gss": ["styles/page.gss"],
             "test/assets/modal.gss": ["styles/modal.gss"],
+            "test/assets/form.gss": ["styles/form.gss"]
         },
         connect: {
             test: {
