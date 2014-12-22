@@ -3,14 +3,14 @@
 /**************************************************/
 
 .modal {
-    [modal-margin] == ([page-max-width] - [modal-max-width]) / 2;
-    [modal-width] == ::window[width] - 2 * [modal-margin];
-    [modal-height] == ::window[height] - 2 * [modal-margin];
-    width: == [modal-width];
-    width: <= [modal-max-width];
-    height: == [modal-height];
+    height: == ::[intrinsic-height];
+    height: <= ::window[height] - [gap];
+    left: == ::window[left] + [gap];
+    right: == ::window[right] - [gap];
+    width: <= [page-width];
     center-x: == ::window[center-x];
-    center-y: == ::window[center-y];
+    top: == ::window[top] + [gap];
+    padding: == [padding];
     overflow-y: scroll;
     background: hotpink;
 }

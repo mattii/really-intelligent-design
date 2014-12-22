@@ -3,8 +3,7 @@
 /**************************************************/
 
 .page {
-    width: == ::window[width];
-    width: <= [page-max-width];
+    width: == [page-width];
     height: == ::window[height];
     height: == ::[intrinsic-height];
     center-x: == ::window[center-x];

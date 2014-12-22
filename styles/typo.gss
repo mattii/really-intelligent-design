@@ -8,3 +8,10 @@ h1 {
     line-height: == 8 * [grid];
     font-size: == 6 * [grid];
 }
+
+h2 {
+    margin-top: 0;
+    margin-bottom: == 2 * [grid];
+    line-height: == 6 * [grid];
+    font-size: == 4 * [grid];
+}
