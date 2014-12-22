@@ -1,0 +1,29 @@
+{
+  "name": "really-intelligent-design",
+  "version": "1.0.0",
+  "description": "I mean - really intelligent design",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "grunt-concurrent": "^1.0.0",
+    "grunt-connect": "^0.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-css-import": "^0.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattii/really-intelligent-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattii/really-intelligent-design/issues"
+  },
+  "homepage": "https://github.com/mattii/really-intelligent-design"
+}

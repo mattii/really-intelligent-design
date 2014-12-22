@@ -1,6 +1,6 @@
-/**************************************************/
-/* modal.gss
-/**************************************************/
+@import "base.gss";
+@import "typo.gss";
+@import "viewport.gss";
 
 .modal {
     height: == ::[intrinsic-height];

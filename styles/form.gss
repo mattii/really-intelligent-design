@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**************************************************/
 /* Basic form
 /**************************************************/
@@ -76,4 +77,11 @@ form.form-horizontal {
 
 .checkbox {
     margin-bottom: == 3 * [grid];
+=======
+@import "base.gss";
+@import "typo.gss";
+@import "viewport.gss";
+
+.form {
+>>>>>>> 7f803a6fcee42e5097d7a7e03bda70cd6c6e89c9
 }

@@ -1,6 +1,6 @@
-/**************************************************/
-/* page.gss
-/**************************************************/
+@import "base.gss";
+@import "typo.gss";
+@import "viewport.gss";
 
 .page {
     width: == [page-width];
