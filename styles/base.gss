@@ -4,6 +4,17 @@
 
 [grid] == 6 !require;
 
+[gap] == 4 * [grid] !require;
+
+[padding] == 2 * [grid] !require;
+
 [page-max-width] == 150 * [grid] !require;
+[page-width] == ::window[width];
+[page-width] <= [page-max-width];
+
 [modal-max-width] == 100 * [grid] !require;
 [modal-max-height] == 100 * [grid] !require;
+
+* {
+    box-sizing: border-box;
+}
