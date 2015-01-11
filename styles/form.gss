@@ -1,12 +1,13 @@
-<<<<<<< HEAD
+@import "base.gss";
+@import "typo.gss";
+@import "viewport.gss";
+
 /**************************************************/
 /* Basic form
 /**************************************************/
 
 
 form {
-
-    margin-bottom: == 4 * [grid];
 
     .form-group {
         margin-bottom: == 3 * [grid];
@@ -22,7 +23,7 @@ form {
         width: 100%;
         height: == 6 * [grid];
         padding: == 2 * [grid];
-        line-height: 4 * [grid];
+        line-height: == 2 * [grid];
         border: 1px solid #000;
         display: block;
 
@@ -34,54 +35,14 @@ form {
 
 }
 
-
-
-
-/**************************************************/
-/* Horizontal form
-/**************************************************/
-
-form.form-horizontal {
-    .form-group {
-        
-
-        label {
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: == 1 * [grid];
-            width: ==  ::[intrinsic-width];     
-        } 
-
-        .form-control {
-
-        }   
-    }
-}
-
-
-.form-group label {
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: == 1 * [grid];
-}
-
-.form-control {
-    width: 100%;
+.btn {
     height: == 6 * [grid];
     padding: == 2 * [grid];
-    line-height: 4 * [grid];
-    border: 1px solid #000;
-    display: block;
+    line-height: == 2 * [grid] !require;
 
+    border: 1px solid #000;
 }
 
-.checkbox {
-    margin-bottom: == 3 * [grid];
-=======
-@import "base.gss";
-@import "typo.gss";
-@import "viewport.gss";
-
-.form {
->>>>>>> 7f803a6fcee42e5097d7a7e03bda70cd6c6e89c9
+.btn-default {
+    background-color: #fff;
 }
