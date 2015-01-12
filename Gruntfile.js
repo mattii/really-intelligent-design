@@ -10,8 +10,17 @@ module.exports = function (grunt) {
                     // Start another live reload server on port 1337
                     livereload: true
                 }
+            },
+            html: {
+                files: ["test/*.html"],
+                options: {
+                    // Start another live reload server on port 1337
+                    livereload: true
+                }  
             }
+
         },
+
         css_import: {
             "test/assets/page.gss": ["styles/page.gss"],
             "test/assets/modal.gss": ["styles/modal.gss"],

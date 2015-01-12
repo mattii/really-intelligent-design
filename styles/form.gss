@@ -1,13 +1,14 @@
 @import "base.gss";
 @import "typo.gss";
 @import "viewport.gss";
+@import "page.gss";
 
 /**************************************************/
 /* Basic form
 /**************************************************/
 
 
-form {
+.form-basic {
 
     .form-group {
         margin-bottom: == 3 * [grid];
@@ -36,13 +37,182 @@ form {
 }
 
 /**************************************************/
+/* Basic form (constraints)
+/**************************************************/
+
+.page {
+    .form-constraint {
+
+        width: == ::parent[width];
+        height: == ::[intrinsic-height];
+        center-x: == ::parent[center-x];
+
+
+        .form-group-1 {
+            top: == ::parent[top] + [gap];
+            height: == ::[intrinsic-height];
+            left: == ::parent[left] + [gap];
+            right: == ::parent[right] - [gap];
+        }
+
+        .form-group-2 {
+            top: == .form-group-1[bottom] + [gap];
+            height: == ::[intrinsic-height];
+            left: == ::parent[left] + [gap];
+            right: == ::parent[right] - [gap];
+        }
+
+        .form-group-3 {
+            top: == .form-group-2[bottom] + [gap];
+            height: == ::[intrinsic-height];
+            left: == ::parent[left] + [gap];
+            right: == ::parent[right] - [gap];
+        }
+
+        .form-group-4 {
+            top: == .form-group-3[bottom] + [gap];
+            height: == ::[intrinsic-height];
+            left: == ::parent[left] + [gap];
+            right: == ::parent[right] - [gap];
+        }
+
+        .form-group-5 {
+            top: == .form-group-4[bottom] + [gap];
+            height: == ::[intrinsic-height];
+            left: == ::parent[left] + [gap];
+            right: == ::parent[right] - [gap];
+        }
+
+
+        .form-group {
+
+            label {
+                display: inline-block;
+                font-weight: bold;
+                margin-bottom: == 1 * [grid];
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            height: == 6 * [grid];
+            padding: == 2 * [grid];
+            line-height: == 2 * [grid];
+            border: 1px solid #000;
+            display: block;
+
+        }
+
+        .checkbox {
+            margin-bottom: == 3 * [grid];
+        }
+
+    }    
+}
+
+/**************************************************/
+/* Basic form (vfl)
+/**************************************************/
+
+.page {
+    .form-vfl {
+
+        width: == ::parent[width];
+        height: == ::[intrinsic-height];
+        center-x: == ::parent[center-x];
+
+        @vertical |[.form-group-1]-[.form-group-2]-[.form-group-3]-[.form-group-4]-[.form-group-5]| in(.form-vfl) gap([gap]);
+        @horizontal |-[.form-group-1]-| in(.form-vfl) gap([gap]);
+        @horizontal |-[.form-group-2]-| in(.form-vfl) gap([gap]);
+        @horizontal |-[.form-group-3]-| in(.form-vfl) gap([gap]);
+        @horizontal |-[.form-group-4]-| in(.form-vfl) gap([gap]);
+        @horizontal |-[.form-group-5]-| in(.form-vfl) gap([gap]);
+
+        .form-group {
+            height: == ::[intrinsic-height];
+            label {
+                display: inline-block;
+                font-weight: bold;
+                margin-bottom: == 1 * [grid];
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            height: == 6 * [grid];
+            padding: == 2 * [grid];
+            line-height: == 2 * [grid];
+            border: 1px solid #000;
+            display: block;
+
+        }
+
+        .checkbox {
+            margin-bottom: == 3 * [grid];
+        }
+
+    }    
+}
+
+/**************************************************/
+/* Basic form (flow mixed with vfl)
+/**************************************************/
+
+.page {
+    .form-mixed-vfl {
+
+        width: == ::parent[width];
+        height: == ::[intrinsic-height];
+        center-x: == ::parent[center-x];
+
+        .form-group {
+            label {
+                display: inline-block;
+                font-weight: bold;
+                margin-bottom: == 1 * [grid];
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            height: == 6 * [grid];
+            padding: == 2 * [grid];
+            line-height: == 2 * [grid];
+            border: 1px solid #000;
+            display: block;
+
+        }
+
+        .checkbox {
+            margin-bottom: == 3 * [grid];
+        }
+
+        .form-group-buttons {
+            width: == ::parent[width];
+            height: == ::[intrinsic-height];
+            bottom: == ::parent[bottom] - [gap];
+            center-x: == ::parent[center-x];
+
+
+            @horizontal |[.btn-submit]~-~[.btn-preview]~-~[.btn-cancel]| in(.form-group-buttons) gap([gap]);
+        }
+
+        padding-bottom: == .form-group-buttons[intrinsic-height];
+
+    }    
+}
+
+
+
+/**************************************************/
 /* Buttons
 /**************************************************/
 
 .btn {
     height: == 6 * [grid];
     padding: == 2 * [grid];
-    line-height: == 2 * [grid] !require;
+    line-height: == 2 * [grid];
+    width: == ::[intrinsic-width];
 
     border: 1px solid #000;
 }

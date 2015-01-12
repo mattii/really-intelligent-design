@@ -15,8 +15,8 @@
     </head>
     <body>
         <div class="page">
-            <h2>Basic Form</h2>
-            <form role="form" class="form-basic" id="form-basic">
+            <h2>Basic Form (mixed with vfl)</h2>
+            <form role="form" class="form-mixed-vfl">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
@@ -35,8 +35,12 @@
                   <input type="checkbox"> Check me out
                 </label>
               </div>
-              <button type="submit" class="btn btn-default" id="btn-submit">Submit</button>
-              <button type="submit" class="btn btn-default" id="btn-cancel">Cancel</button>
+
+              <div class="form-group form-group-buttons">
+                <button type="submit" class="btn btn-default btn-submit">Submit</button>
+                <button type="submit" class="btn btn-default btn-preview">Preview</button>
+                <button type="submit" class="btn btn-default btn-cancel">Cancel</button>
+              </div>
 
             </form>
 
