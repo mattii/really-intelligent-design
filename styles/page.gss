@@ -2,10 +2,13 @@
 @import "typo.gss";
 @import "viewport.gss";
 
+[page-max-width] == 150 * [grid] !require;
+[page-width] == ::window[width] - 2 * [gap];
+[page-width] <= [page-max-width] !require;
+
 .page {
-    width: == [page-width];
-    height: == ::window[height];
-    height: == ::[intrinsic-height];
+    /*height: >= ::window[height] !require;;
+    height: == ::[intrinsic-height];*/
     center-x: == ::window[center-x];
-    background: hotpink;
+    width: == [page-width];
 }
