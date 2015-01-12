@@ -2,15 +2,15 @@
 @import "typo.gss";
 @import "viewport.gss";
 
+[modal-max-width] == 100 * [grid] !require;
+[modal-width] == ::window[width] - 2 * [gap];
+[modal-width] <= [modal-max-width] !require;
+
 .modal {
-    height: == ::[intrinsic-height];
-    height: <= ::window[height] - [gap];
-    left: == ::window[left] + [gap];
-    right: == ::window[right] - [gap];
-    width: <= [page-width];
-    center-x: == ::window[center-x];
+    width: == [modal-width];
+    /*bottom: <= ::window[bottom] - [gap] !require;*/
     top: == ::window[top] + [gap];
+    center-x: == ::window[center-x];
     padding: == [padding];
-    overflow-y: scroll;
-    background: hotpink;
+    overflow-y: auto;
 }
